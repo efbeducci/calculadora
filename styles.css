@@ -10,7 +10,7 @@
 }
 
 body{
-  background: #3aaf9f;
+  background: #8f94d4;
 }
 
 .wrapper{
@@ -31,32 +31,33 @@ body{
   text-align: center;
   font-size: 26px;
   font-weight: bold;
-  color: #3aaf9f;
+  color: #8f94d4;
 }
 
-.wrapper .social_media{
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
+.wrapper .error{
+  
+  justify-content: left;
+  margin-bottom: 10px;
+  display: none;
+  
+}
+.wrapper .error span{
+  padding-left: 10px;
+
 }
 
-.wrapper .social_media .item{
-  margin: 0 5px;
+.wrapper i{
+
   width: 35px;
-  height: 35px;
-  line-height: 35px;
+  height: 36px;
+  line-height:35px;
   text-align: center;
-  border: 2px solid #eeeeee;
+  border: 2px solid #ce3636;
   border-radius: 50%;
-  cursor: pointer;
-  color: #eeeeee;
-  transition: all 0.5s ease;
+  color: #e06969;
 }
 
-.wrapper .social_media .item:hover{
-  border: 2px solid #3aaf9f;
-  color: #3aaf9f;
-}
+
 
 .wrapper .form .input_field{
   position: relative;
@@ -66,10 +67,11 @@ body{
 .wrapper .form .input_field .input{
   width: 100%;
   padding: 12px;
-  padding-left: 30px;
+  padding-left: 5px;
   border: none;
   background: #eeeeee;
 }
+
 
 .wrapper .form .btn{
   width: 70%;
@@ -80,8 +82,17 @@ body{
   border-radius: 25px;
 }
 
-.wrapper .form .btn a{
+.wrapper .form .btn button{
   color: #fff;
+  background-color: #3aaf9f;
+  border: none;
+  cursor: pointer;
+  
+}
+.wrapper .form .btn:hover{
+  
+  color: #3aaf9f;
+ 
 }
 
 .wrapper .form .input_field i{
