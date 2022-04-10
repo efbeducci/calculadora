@@ -1,4 +1,3 @@
-
 const add = document.getElementById('add')
 const sub = document.getElementById('sub')
 const div = document.getElementById('div')
