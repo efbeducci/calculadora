@@ -9,29 +9,35 @@ add.addEventListener("click",sumar)
 sub.addEventListener("click",restar)
 div.addEventListener("click",dividir)
 
+function getFirstElem(){
+    return parseInt(document.getElementById('firstI').value)
+}
+function getSecondEleme(){
+    return parseInt(document.getElementById('secondI').value)
+}
+function check(){
+    return (document.getElementById('secondI').value == '') ||  (document.getElementById('firstI').value == '')
+}
 
 function sumar(){
-    var x = parseInt(document.getElementById('firstI').value)
-    var y = parseInt(document.getElementById('secondI').value)
-    
-    document.getElementById('resID').innerHTML = x+y;
+    !check() ? document.getElementById('resID').innerHTML = getFirstElem() + getSecondEleme() : incomplete();
 }
 
+
 function restar(){
-    var x = parseInt(document.getElementById('firstI').value)
-    var y = parseInt(document.getElementById('secondI').value)
-    
-    document.getElementById('resID').innerHTML = x-y;
+    !check() ? document.getElementById('resID').innerHTML = getFirstElem() - getSecondEleme() : incomplete();
 }
+
 function dividir(){
-    var x = parseInt(document.getElementById('firstI').value)
-    var y = parseInt(document.getElementById('secondI').value)
-    if(y==0){
+    if(getSecondEleme()==0){
         document.getElementById('error_text').innerText= 'No se puede dividir por 0'
         document.querySelector('#error').style.display = 'block'
     } else {
-        document.getElementById('resID').innerHTML = x/y;
-   
+        document.getElementById('resID').innerHTML = getFirstElem()/getSecondEleme();
     } 
 }
-    
+function incomplete(){
+    document.getElementById('error_text').innerText= 'Complete los campos'
+    document.querySelector('#error').style.display = 'block'
+
+}
